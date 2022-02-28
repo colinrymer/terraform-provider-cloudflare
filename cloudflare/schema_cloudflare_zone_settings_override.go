@@ -352,6 +352,13 @@ var resourceCloudflareZoneSettingsSchema = map[string]*schema.Schema{
 		Computed:     true,
 		ValidateFunc: validation.StringInSlice([]string{"off", "flexible", "full", "strict", "origin_pull"}, false), // depends on plan
 	},
+	
+	"ssl_recommender": {
+		Type:         schema.TypeString,
+		Optional:     true,
+		Computed:     true,
+		ValidateFunc: validation.StringInSlice([]string{"on", "off"}, false),
+	},
 
 	"universal_ssl": {
 		Type:         schema.TypeString,
